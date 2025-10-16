@@ -1,0 +1,161 @@
+/*index.html*/
+html {
+  font-size: 14px; 
+  font-family: system-ui, sans-serif; 
+  line-height: 1.5;
+  color: #000400;
+  background-color:rgb(242, 242, 242);
+
+}
+body {
+  margin: 1rem;
+  padding: 0;
+}
+
+.ind {
+    color:azure;
+    background-color: rgb(54, 121, 54);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.ulind {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.ulind li {
+  float: left;
+}
+
+.ulind li a {
+  display: block;
+  color: azure;
+  text-align: center;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.ulind li a:hover {
+  background-color: rgb(4, 88, 4);
+  cursor: pointer;
+}
+
+a {
+  color: azure; 
+  text-decoration: none; 
+  font-size: 20px;
+}
+
+
+/* login.html*/
+.log {
+  margin: auto;
+  border-radius: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.log h2 {
+  margin-bottom: 10px;
+  color: #000400;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-bottom: 6px;
+  color: #000400;
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border-color: lightgray;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  background-color: rgb(54, 121, 54);
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(4, 88, 4);
+}
+
+/*uwagi.html*/
+header {
+  position: sticky;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%; 
+  background: rgb(242, 242, 242);
+  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+header h1 {
+  margin: 0;
+  padding: 10px 20px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+section p1 {
+  font-weight: bolder;
+}
+
+section {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  font-size: 18px;
+}
+
+article {
+  font-size: 16px;
+}
+
+.com {
+  max-width: 600px;
+  margin: 30px auto;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+
+h3 {
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  list-style: none;
+}
+
+article p, .ulcom{
+  margin: 10px 0 0 10px;
+  color: #444;
+}

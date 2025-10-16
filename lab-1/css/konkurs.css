@@ -1,0 +1,221 @@
+html {
+    color-scheme: light;
+    transition: color-scheme 0.3s;
+    font-size: 16px; 
+    font-family: Arial, sans-serif; 
+    line-height: 1.5;
+    color: #000400;
+    background-color:rgb(242, 242, 242);
+}
+
+.header {
+    font-size: 20px;
+    position: relative;
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.icon {
+    font-size: 40px;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+    cursor: pointer;
+    padding-top: 20px;
+}
+
+.icon:hover {
+    transform: scale(1.05);
+}
+
+body {  
+    margin: 1rem;
+    padding: 0;
+}
+
+.form-container {
+    width:500px;
+    margin: auto;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="color"]){
+    padding: 8px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="text"]{
+    height: 40px;
+}
+
+input[type="date"]{
+    cursor: pointer;
+}
+
+input[type="color"] {
+    width: 100%;
+    padding: 0.5px 2px;
+    height: 40px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+select {
+    padding: 8px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+datalist option:hover {
+    cursor: pointer;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+option:hover {
+    cursor :pointer;
+}
+
+fieldset {
+    color: grey;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+fieldset legend {
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.radio-group input[type="radio"] {
+    cursor: pointer; 
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: flex-start;
+    width: max-content;
+}
+
+.check input[type="checkbox"] {
+    flex-shrink: 0;
+}
+
+button {
+    font-size: 16px;
+    width: 100%;
+    color: white;
+    background-color: rgb(75, 171, 75);
+    border-color: rgb(75, 171, 75);
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #45a049;
+    cursor: pointer;
+}
+
+
+/* Dark mode */
+.theme-toggle {
+    display: none;
+}
+
+.theme-toggle:checked ~ * {
+    color-scheme: dark;
+}
+
+html:has(.theme-toggle:checked){
+    color-scheme: dark;
+    background-color: #000;
+    color: #e0e0e0;
+}
+
+html:has(.theme-toggle:checked) form {
+    background: #2a2a2a;
+    color: #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.8);
+}
+
+html:has(.theme-toggle:checked) input,
+html:has(.theme-toggle:checked) select {
+    background-color: #3a3a3a;
+    color: #b0b0b0;
+    border: 1px solid #4a4a4a;
+}
+
+html:has(.theme-toggle:checked) input::placeholder {
+    color: #777;
+}
+
+html:has(.theme-toggle:checked) fieldset {
+    color: #b0b0b0;
+    border: 1px solid #555;
+}
+
+html:has(.theme-toggle:checked) fieldset legend {
+    color: #e0e0e0;
+}
+
+html:has(.theme-toggle:checked) label {
+    color: #e0e0e0;
+}
+
+html:has(.theme-toggle:checked) .radio-group {
+    color: #e0e0e0;
+}
+
+html:has(.theme-toggle:checked) button {
+    background-color: #4a9d4a;
+    border-color: #4a9d4a;
+}
+
+html:has(.theme-toggle:checked) button:hover {
+    background-color: #3d8a3d;
+}
+
+html:has(.theme-toggle:checked) input[type="color"] {
+    background-color: #3a3a3a;
+    border: 2px solid #4a4a4a;
+}
+
+html:has(.theme-toggle:checked) .header h2 {
+    color: #e0e0e0;
+}
