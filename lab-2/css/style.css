@@ -1,19 +1,54 @@
-/* Minimalny reset  */
 html {
-  font-size: 16px; /* bazowy rozmiar czcionki */
-  font-family: system-ui, sans-serif; /* font systemowy */
-  line-height: 1.5; /* lepsza czytelność */
+  font-size: 14px; 
+  font-family: system-ui, sans-serif; 
+  line-height: 1.5;
+  color: #000400;
+  background-color:rgb(242, 242, 242);
+
 }
 body {
   margin: 1rem;
   padding: 0;
 }
 
-a {
-  color: #0066cc; /* niebieski kolor linków */
-  text-decoration: none; /* bez podkreślenia */
-  font-size: 1.4rem;
+nav {
+    color:azure;
+    background-color: rgb(54, 121, 54);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
 }
-a:hover {
-  text-decoration: underline; /* podkreślenie przy najechaniu */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: azure;
+  text-align: center;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: rgb(4, 88, 4);
+  cursor: pointer;
+}
+
+a {
+  color: azure; 
+  text-decoration: none; 
+  font-size: 20px;
 }
