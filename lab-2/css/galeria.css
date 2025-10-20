@@ -1,0 +1,107 @@
+html {
+    font-size: 14px; 
+    font-family: system-ui, sans-serif; 
+    line-height: 1.5;
+    color: #000400;
+    background-color:rgb(242, 242, 242);
+
+}
+body {
+    margin: 1rem;
+    padding: 0;
+}
+
+header {
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid green;
+    background: #fff;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 16px;
+}
+
+.gallery {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+    padding: 20px;
+}
+
+
+@media (min-width: 1200px) {
+    .gallery{
+        grid-template-columns: repeat(2, auto);
+        justify-items: center;
+        column-gap: 20px;
+        row-gap: 50px;
+    }
+}
+
+figure{
+    display: inline-block;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 20px;
+    
+}
+img {
+    display: grid;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    border: 2px solid #555;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    
+}
+
+figure:hover {
+    box-shadow: 0 5px 15px green;
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+}
+figcaption {
+    text-align: center;
+    padding: 12px 10px;
+    font-weight: bold;
+    font-style: italic;
+    color: #555;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 2px solid #555;
+    border-top: 2px solid #eee;
+    background: #fff;
+    transition: color 0.3s, transform 0.3s;
+}
+
+figure:hover figcaption {
+    border: 2px solid green;
+    border-top: 2px solid #eee;
+
+}
+
+figure:hover img {
+    border: 2px solid green;
+}
+
+footer {
+    font-size: 12px;
+    width: 100%;
+    font-style: italic;
+    color: white;
+    background-color: green;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
