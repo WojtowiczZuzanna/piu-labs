@@ -91,7 +91,10 @@ input[type="radio"] {
     border-radius: 50%;
     border: 2px solid black;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.2s ease, transform 0.2s ease; 
+}
+.color:hover {
+    transform: scale(1.3);
 }
 
 .color.blue { background-color: var(--blue); }
@@ -155,3 +158,10 @@ body:has(#green:checked) .img {background-image: url("../polo/polo_g.png")}
 body:has(#yellow:checked) {--theme: var(--yellow); --hover-theme: var(--hover-yellow)}
 body:has(#yellow:checked) .img {background-image: url("../polo/polo_y.png")}
 
+@keyframes rotation {
+   0% { transform: rotate(360deg);}
+}
+
+.size:hover {
+    animation: rotation 1s linear;
+}
