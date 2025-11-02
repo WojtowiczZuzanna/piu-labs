@@ -4,9 +4,47 @@
     <meta charset="UTF-8" />
     <title>Lab 4</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="script.js"></script>
   </head>
   <body>
-    <h1>Lab 4</h1>
-    <a href="..">Powrót</a>
+    <h1>Tablica Kanban</h1>
+
+    <div class="kanban">
+      <table>
+        <thead>
+          <th>Do zrobienia <br><span class="count" id="count_todo">0</span></th>
+          <th>W trakcie <br><span class="count" id="count_doing">0</span></th>
+          <th>Zrobione <br><span class="count" id="count_done">0</span></th>
+        </thead>
+        <tr class="card-field">
+          <td class="column" id="todo" ><br></td>
+          <td class="column" id="doing"></td>
+          <td class="column" id="done"></td>
+        </tr>
+        <tr>
+            <td>
+              <button class="add" data-col="todo">Dodaj kartę</button><br>
+              <button class="colorize" data-col="todo">Koloruj kolumnę</button><br>
+              <button class="sort" data-col="todo">Sortuj</button>
+            </td>
+            <td>
+              <button class="add" data-col="doing">Dodaj kartę</button><br>
+              <button class="colorize" data-col="doing">Koloruj kolumnę</button><br>
+              <button class="sort" data-col="doing">Sortuj</button>
+            </td> 
+            <td>
+              <button class="add" data-col="done">Dodaj kartę</button><br>
+              <button class="colorize" data-col="done">Koloruj kolumnę</button><br>
+              <button class="sort" data-col="done">Sortuj</button>
+            </td>
+        </tr>
+      </table>
+
+
+
+
+
+
+    </div>
   </body>
 </html>
