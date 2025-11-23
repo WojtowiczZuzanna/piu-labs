@@ -1,0 +1,102 @@
+:root {
+    --green: rgb(54, 121, 54);
+    --green-dark: rgb(4, 88, 4);
+    --background: rgb(242, 242, 242);
+}
+html {
+    font-size: 20px; 
+    font-family: system-ui, sans-serif;
+    line-height: 1.5; 
+    color: #000400;
+    background-color: var(--background);
+}
+
+body {
+    text-align: center;
+    margin: 1rem;
+    padding: 0;
+}
+
+
+h2 {
+    margin: 20px;
+}
+
+
+button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight:bolder;
+    cursor: pointer;
+    border-radius: 8px;
+    color: white;
+    background-color: var(--green);
+    border: none;
+    transition: background 0.15s, transform 0.12s, opacity 0.12s;
+}
+
+
+button:hover {
+    background-color: var(--green-dark);
+    transform: translateY(-1px);
+}
+
+.counters {
+    margin-top: 12px;
+    font-size: 18px;
+    color: #333;
+}
+
+.board {
+    margin-top: 20px;
+    min-height: 200px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    border: 2px dashed var(--green-dark);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background: #fafafa;
+    border-radius: 6px;
+}
+
+
+.shape {
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--green);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.12s;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.shape:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 14px var(--green-dark);
+}
+
+
+.square { border-radius: 6px; }
+.circle { border-radius: 50%; }
+
+
+@media (max-width: 420px) {
+    .shape { width: 48px; height: 48px; }
+    button { padding: 10px 14px; font-size: 13px; }
+}
+
+
+
+
+
+
+
+
+
+
