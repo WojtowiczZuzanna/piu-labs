@@ -1,0 +1,78 @@
+:root {
+    --green: rgb(54, 121, 54);
+    --green-dark: rgb(4, 88, 4);
+    --background: rgb(242, 242, 242);
+}
+
+html {
+    font-size: 20px;
+    font-family: system-ui, sans-serif;
+    background-color: var(--background);
+}
+
+body {
+    text-align: center;
+    margin: 1rem;
+}
+
+button {
+    margin: 6px;
+    padding: 10px 18px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    color: white;
+    background-color: var(--green);
+    border: none;
+    transition: background 0.15s, transform 0.12s;
+}
+
+button:hover {
+    background-color: var(--green-dark);
+    transform: translateY(-1px);
+}
+
+div {
+    margin-top: 30px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border: 2px dashed var(--green-dark);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background: #fafafa;
+    border-radius: 10px;
+}
+
+div p{
+    margin: 0;
+}
+
+#error {
+    color: red;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+ul {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: white;
+    border: 2px solid var(--green);
+    padding: 8px;
+    margin: 5px auto;
+    width: 70%;
+    border-radius: 6px;
+}
