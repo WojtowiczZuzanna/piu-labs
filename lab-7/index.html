@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab-7</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="product-card.js"></script>
+</head>
+
+<body>
+
+<h1>Karty Produktów</h1>
+
+<div class="products-grid">
+
+    <product-card>
+        <img slot="image" class="image" src="./images/beanie.jpg">
+        <span slot="name">Czapka zimowa</span>
+        <span slot="price">39,99 zł</span>
+        <span slot="promo">-15% PROMOCJA</span>
+        <div slot="sizes">Rozmiar uniwersalny</div>
+    </product-card>
+
+    <product-card>
+        <img slot="image" class="image" src="./images/earmuffs.jpg">
+        <span slot="name">Nauszniki zimowe</span>
+        <span slot="price">29,99 zł</span>
+        <div slot="colors">Kolory: niebieski, czerwony, różowy, biały</div>
+        <div slot="sizes">Rozmiar uniwersalny</div>
+    </product-card>
+
+    <product-card>
+        <img slot="image" class="image" src="./images/gloves.png">
+        <span slot="name">Rękawiczki zimowe</span>
+        <span slot="price">39,99 zł</span>
+        <span slot="promo">-10% PROMOCJA</span>
+        <div slot="colors">Kolory: czerwony</div>
+        <div slot="sizes">Rozmiary: S, M, L</div>
+    </product-card>
+
+    <product-card>
+        <img slot="image" class="image" src="./images/scarf.jpg">
+        <span slot="name">Szalik zimowy</span>
+        <span slot="price">29,99 zł</span>
+        <div slot="colors">Kolory: czerwony, niebieski</div>
+        <div slot="sizes">Rozmiar uniwersalny</div>
+    </product-card>
+
+    <product-card>
+        <img slot="image" class="image" src="./images/slippers.jpg">
+        <span slot="name">Pantofle zimowe</span>
+        <span slot="price">59,99 zł</span>
+        <div slot="sizes">Rozmiary: 37, 38, 39, 40, 41, 42</div>
+    </product-card>
+
+    <product-card>
+        <img slot="image" class="image" src="./images/socks.jpg">
+        <span slot="name">Skarpetki zimowe</span>
+        <span slot="price">49,99 zł</span>
+        <span slot="promo">-20% PROMOCJA</span>
+        <div slot="sizes">Rozmiary: 37, 38, 39, 40, 41, 42</div>
+    </product-card>
+
+</div>
+
+</body>
+</html>
