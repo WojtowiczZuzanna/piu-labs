@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Czapka zimowa",
+    "price": 39.99,
+    "image": "./images/beanie.jpg",
+    "promo": "-15% PROMOCJA",
+    "sizes": "Rozmiar uniwersalny"
+  },
+  {
+    "id": 2,
+    "name": "Nauszniki zimowe",
+    "price": 29.99,
+    "image": "./images/earmuffs.jpg",
+    "colors": "Kolory: niebieski, czerwony, różowy, biały",
+    "sizes": "Rozmiar uniwersalny"
+  },
+  {
+    "id": 3,
+    "name": "Rękawiczki zimowe",
+    "price": 39.99,
+    "image": "./images/gloves.png",
+    "promo": "-10% PROMOCJA",
+    "colors": "Kolory: czerwony",
+    "sizes": "Rozmiary: S, M, L"
+  },
+  {
+    "id": 4,
+    "name": "Szalik zimowy",
+    "price": 29.99,
+    "image": "./images/scarf.jpg",
+    "colors": "Kolory: czerwony, niebieski",
+    "sizes": "Rozmiar uniwersalny"
+  },
+  {
+    "id": 5,
+    "name": "Pantofle zimowe",
+    "price": 59.99,
+    "image": "./images/slippers.jpg",
+    "sizes": "Rozmiary: 37, 38, 39, 40, 41, 42"
+  },
+  {
+    "id": 6,
+    "name": "Skarpetki zimowe",
+    "price": 49.99,
+    "image": "./images/socks.jpg",
+    "promo": "-20% PROMOCJA",
+    "sizes": "Rozmiary: 37, 38, 39, 40, 41, 42"
+  }
+]

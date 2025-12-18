@@ -1,67 +1,66 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <title>Lab-7</title>
     <link rel="stylesheet" href="style.css">
     <script type="module" src="product-card.js"></script>
+    <script type="module" src="product-list.js"></script>
+    <script type="module" src="shopping-cart.js"></script>
 </head>
 
 <body>
 
 <h1>Karty Produktów</h1>
 
-<div class="products-grid">
+<shopping-cart id="cart"></shopping-cart>
 
-    <product-card>
-        <img slot="image" class="image" src="./images/beanie.jpg">
-        <span slot="name">Czapka zimowa</span>
-        <span slot="price">39,99 zł</span>
-        <span slot="promo">-15% PROMOCJA</span>
-        <div slot="sizes">Rozmiar uniwersalny</div>
-    </product-card>
+<product-list id="productList"></product-list>
 
-    <product-card>
-        <img slot="image" class="image" src="./images/earmuffs.jpg">
-        <span slot="name">Nauszniki zimowe</span>
-        <span slot="price">29,99 zł</span>
-        <div slot="colors">Kolory: niebieski, czerwony, różowy, biały</div>
-        <div slot="sizes">Rozmiar uniwersalny</div>
-    </product-card>
+<script type="module">
+    const cart = document.getElementById('cart');
+    const productList = document.getElementById('productList');
 
-    <product-card>
-        <img slot="image" class="image" src="./images/gloves.png">
-        <span slot="name">Rękawiczki zimowe</span>
-        <span slot="price">39,99 zł</span>
-        <span slot="promo">-10% PROMOCJA</span>
-        <div slot="colors">Kolory: czerwony</div>
-        <div slot="sizes">Rozmiary: S, M, L</div>
-    </product-card>
+    productList.addEventListener('add-to-cart', (event) => {
+        cart.addItem(event.detail);
+  });
+</script>
 
-    <product-card>
-        <img slot="image" class="image" src="./images/scarf.jpg">
-        <span slot="name">Szalik zimowy</span>
-        <span slot="price">29,99 zł</span>
-        <div slot="colors">Kolory: czerwony, niebieski</div>
-        <div slot="sizes">Rozmiar uniwersalny</div>
-    </product-card>
+</body>
+</html>
+--><!DOCTYPE html> 
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab-7</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="product-card.js"></script>
+    <script type="module" src="product-list.js"></script>
+    <script type="module" src="shopping-cart.js"></script>
+</head>
 
-    <product-card>
-        <img slot="image" class="image" src="./images/slippers.jpg">
-        <span slot="name">Pantofle zimowe</span>
-        <span slot="price">59,99 zł</span>
-        <div slot="sizes">Rozmiary: 37, 38, 39, 40, 41, 42</div>
-    </product-card>
+<body>
 
-    <product-card>
-        <img slot="image" class="image" src="./images/socks.jpg">
-        <span slot="name">Skarpetki zimowe</span>
-        <span slot="price">49,99 zł</span>
-        <span slot="promo">-20% PROMOCJA</span>
-        <div slot="sizes">Rozmiary: 37, 38, 39, 40, 41, 42</div>
-    </product-card>
+<h1>Karty Produktów</h1>
 
+<div class="main-container">
+    <div class="content-area">
+        <product-area id="product-area"></product-area>
+    </div>
+    
+    <div class="cart-area">
+        <shopping-cart id="cart"></shopping-cart>
+    </div>
 </div>
+
+<script type="module">
+  const cart = document.getElementById('cart');
+  const productList = document.getElementById('product-area');
+
+  productList.addEventListener('add-to-cart', (event) => {
+    cart.addItem(event.detail);
+  });
+</script>
 
 </body>
 </html>

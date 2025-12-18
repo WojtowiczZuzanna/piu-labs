@@ -65,19 +65,74 @@ template.innerHTML = `
     }
   </style>
 
-  <slot name="image"></slot>
-  <div class="name"><slot name="name"></slot></div>
-  <div class="price"><slot name="price"></slot></div>
-  <div class="promo"><slot name="promo"></slot></div>
-  <div class="details"><slot name="colors"></slot></div>
-  <div class="details"><slot name="sizes"></slot></div>
-  <button><slot name="button">Do koszyka</slot></button>
+  <img class="image" id="image">
+  <div class="name" id="name"></div>
+  <div class="price" id="price"></div>
+  <div class="promo" id="promo"></div>
+  <div class="details" id="colors"></div>
+  <div class="details" id="sizes"></div>
+  <button id="addBtn">Do koszyka</button>
 `;
 
 class ProductCard extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" }).appendChild(template.content.cloneNode(true));
+    this._product = null;
+  }
+
+  connectedCallback() {
+    this.shadowRoot.getElementById('addBtn').addEventListener('click', () => {
+      if (this._product) {
+        this.dispatchEvent(new CustomEvent('add-to-cart', {
+          detail: this._product,
+          bubbles: true,
+          composed: true
+        }));
+      }
+    });
+  }
+
+  set product(data) {
+    this._product = data;
+    this.render();
+  }
+
+  render() {
+    if (!this._product) return;
+
+    const img = this.shadowRoot.getElementById('image');
+    const name = this.shadowRoot.getElementById('name');
+    const price = this.shadowRoot.getElementById('price');
+    const promo = this.shadowRoot.getElementById('promo');
+    const colors = this.shadowRoot.getElementById('colors');
+    const sizes = this.shadowRoot.getElementById('sizes');
+
+    img.src = this._product.image;
+    img.alt = this._product.name;
+    name.textContent = this._product.name;
+    price.textContent = `${this._product.price.toFixed(2)} zł`;
+    
+    if (this._product.promo) {
+      promo.textContent = this._product.promo;
+      promo.style.display = 'inline-block';
+    } else {
+      promo.style.display = 'none';
+    }
+
+    if (this._product.colors) {
+      colors.textContent = this._product.colors;
+      colors.style.display = 'block';
+    } else {
+      colors.style.display = 'none';
+    }
+
+    if (this._product.sizes) {
+      sizes.textContent = this._product.sizes;
+      sizes.style.display = 'block';
+    } else {
+      sizes.style.display = 'none';
+    }
   }
 }
 
